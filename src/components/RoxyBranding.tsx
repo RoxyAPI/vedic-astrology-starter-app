@@ -13,7 +13,7 @@ export function RoxyBranding() {
         Powered by RoxyAPI
       </Text>
       <Text style={{ fontSize: 16, color: '#6b7280', marginBottom: 32, textAlign: 'center', paddingHorizontal: 16 }}>
-        Professional Numerology API with Life Path, Expression, Soul Urge, and comprehensive chart calculations
+        Professional Vedic Astrology API with Kundli, Navamsa, Vimshottari Dasha, Panchang, and Guna Milan matching
       </Text>
       <View style={{ width: '100%', maxWidth: 400, gap: 12 }}>
         <Pressable

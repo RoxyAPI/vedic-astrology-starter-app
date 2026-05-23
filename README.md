@@ -1,262 +1,204 @@
 # Vedic Astrology Starter App
 
-A fully functional React Native Expo app showcasing the [RoxyAPI Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api). Production-grade Vedic (Jyotish) and KP astrology with NASA JPL ephemerides. Birth charts (D1/D9), Ashtakoot Gun Milan compatibility, Vimshottari Dasha predictions, dosha detection (Manglik, Kalsarpa, Sadhesati), 300+ planetary yogas, complete Panchang, and KP horary with 249-level sub-lord analysis. Beautiful UI components with dark mode support.
+[![Get API Key](https://img.shields.io/badge/Get_API_Key-roxyapi.com-black?style=for-the-badge)](https://roxyapi.com/pricing)
+[![API Docs](https://img.shields.io/badge/API_Docs-Reference-black?style=for-the-badge)](https://roxyapi.com/api-reference#tag/vedic-astrology)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](LICENSE)
+
+Open-source React Native (Expo) template for a Vedic astrology app: Kundli (D1 Rashi chart), Navamsa (D9), Vimshottari Dasha, detailed Panchang, and Ashtakoota Guna Milan matching. Built on the [Roxy](https://roxyapi.com) Vedic Astrology API and the official [@roxyapi/sdk](https://www.npmjs.com/package/@roxyapi/sdk). One API key, every Jyotish and KP endpoint, full control over your native UI.
+
+Fork it, set one environment variable, and ship.
 
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/01.jpeg" width="200" />
-  <img src="screenshots/02.jpeg" width="200" />
-  <img src="screenshots/03.jpeg" width="200" />
-  <img src="screenshots/04.jpeg" width="200" />
+  <img src="screenshots/01.jpeg" width="220" />
+  <img src="screenshots/02.jpeg" width="220" />
+  <img src="screenshots/03.jpeg" width="220" />
+  <img src="screenshots/04.jpeg" width="220" />
 </p>
 
-## Features
+## What you get
 
-Build a professional Vedic astrology app with essential features:
+- **Birth Chart (Kundli)** with all nine grahas grouped by rashi, plus nakshatra and pada for each planet.
+- **Navamsa (D9)** divisional chart for marriage and spiritual analysis, with Vargottama planet detection.
+- **Dasha periods** showing the running Mahadasha, Antardasha, and Pratyantardasha with dates and interpretation.
+- **Detailed Panchang** with Tithi, Nakshatra, Yoga, Karana, Vara, sunrise and sunset, Rahu Kaal, and Abhijit Muhurta.
+- **Kundli matching** with the 36-point Ashtakoota Guna Milan score and a koota by koota breakdown.
+- **Birth-city geocoding** so users search a city instead of typing latitude, longitude, and timezone.
+- **Dark mode** that follows the device setting.
 
-- **Birth Chart (Kundli)**: Generate complete D1 Rashi chart with all 9 planetary positions plus Ascendant
-- **Navamsa Chart (D9)**: Calculate D9 divisional chart for marriage and spiritual insights
-- **Dasha Periods**: Vimshottari Dasha, Yogini Dasha, Char Dasha calculations with accurate periods
-- **Panchang**: Daily Tithi, Nakshatra, Yoga, Karana calculations with Rahu Kaal timings
-- **Compatibility Analysis**: Kundli matching (Ashtakoota) with Guna Milan scores for marriage
-- **Planetary Positions**: Real-time graha positions with nakshatra and pada details
-- **Dosha Analysis**: Manglik Dosha, Kaal Sarp Dosha detection and remedies
-- **Yogas**: Identify auspicious and inauspicious planetary yogas in birth chart
-- **Dark Mode Ready**: Automatic light/dark mode support with violet theme
-- **Accurate Calculations**: Professional Vedic astrology calculations with Lahiri ayanamsha
+## Stack
 
-## Tech Stack
+| Technology | Purpose |
+|-----------|---------|
+| [Expo SDK 54](https://expo.dev) | React Native runtime and build tooling |
+| [Expo Router](https://docs.expo.dev/router/introduction/) | File-based navigation with bottom tabs |
+| [@roxyapi/sdk](https://www.npmjs.com/package/@roxyapi/sdk) | Fully typed RoxyAPI client. One key, every domain. |
+| [NativeWind v4](https://www.nativewind.dev) | Tailwind CSS for React Native |
+| [Roxy Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api) | Kundli, dasha, panchang, dosha, and KP, verified against NASA JPL Horizons |
 
-- **Expo SDK 54** - React Native development platform
-- **Expo Router** - File-based navigation with bottom tabs
-- **TypeScript** - Type-safe development
-- **NativeWind v4** - Tailwind CSS for React Native styling
-- **openapi-fetch** - Type-safe API client
-- **Lucide Icons** - Beautiful icons for navigation
-- **RoxyAPI Vedic Astrology API** - Professional Vedic astrology calculations
-- **Auto-generated Types** - TypeScript types from OpenAPI schema
+## Quick start
 
-## Quick Start
-
-### 1. Clone and Install
+### 1. Clone and install
 
 ```bash
-git clone https://github.com/RoxyAPI/vedic-astrology-starter-app
+git clone https://github.com/RoxyAPI/vedic-astrology-starter-app.git
 cd vedic-astrology-starter-app
 npm install
 ```
 
-### 2. Get Your API Key
+### 2. Get your API key
 
-Visit [roxyapi.com/pricing](https://roxyapi.com/pricing) to sign up and get your API key. RoxyAPI provides professional Vedic astrology calculations with:
+Get instant access at **[roxyapi.com/pricing](https://roxyapi.com/pricing)**. One key unlocks every Vedic and KP endpoint. Add it to `.env`:
 
-- Birth chart (D1 Rashi chart) generation
-- Navamsa chart (D9) and other divisional charts
-- Vimshottari Dasha, Yogini Dasha, Char Dasha periods
-- Panchang calculations (Tithi, Nakshatra, Yoga, Karana)
-- Compatibility analysis with Ashtakoota Guna Milan
-- Planetary positions with nakshatra and pada
-- Dosha analysis (Manglik, Kaal Sarp)
-- Yoga identification in birth charts
-- Accurate calculations with Lahiri ayanamsha
-
-### 3. Configure Environment
-
-Create a `.env` file in the project root:
-
-```env
-EXPO_PUBLIC_ROXYAPI_KEY=your_api_key_here
-EXPO_PUBLIC_ROXYAPI_BASE_URL=https://roxyapi.com/api/v2
+```
+EXPO_PUBLIC_ROXYAPI_KEY=your-api-key-here
 ```
 
-### 4. Run the App
+> **Bundled key caveat.** A mobile app has no server, so any `EXPO_PUBLIC_*` value is compiled into the build and can be read off a device. For production, use a key restricted to your bundle id in the dashboard, or route calls through a thin backend proxy that holds the real key. Never ship an unrestricted key.
+
+### 3. Run
 
 ```bash
-# Start Expo development server
-npm start
-
-# Run on iOS
-npm run ios
-
-# Run on Android
-npm run android
-
-# Run on web
-npm run web
+npm start          # dev server, then press i, a, or w
+npm run ios        # iOS simulator (macOS only)
+npm run android    # Android emulator
+npm run web        # web
 ```
 
-## Project Structure
+## How it works
 
-```
-vedic-astrology-starter-app/
-├── app/
-│   ├── (tabs)/
-│   │   ├── index.tsx           # Birth chart (Kundli) calculator
-│   │   ├── navamsa.tsx         # Navamsa (D9) chart
-│   │   ├── dasha.tsx           # Dasha period calculations
-│   │   ├── panchang.tsx        # Daily Panchang
-│   │   └── compatibility.tsx   # Kundli matching
-│   └── _layout.tsx
-├── src/
-│   ├── api/
-│   │   ├── client.ts           # API client singleton
-│   │   ├── astrology.ts        # Vedic astrology API methods
-│   │   ├── schema.ts           # Auto-generated types
-│   │   └── types.ts            # Type exports
-│   ├── components/
-│   │   └── RoxyBranding.tsx    # RoxyAPI branding
-│   ├── constants/
-│   │   ├── colors.ts           # App color theme
-│   │   └── index.ts
-│   └── hooks/
-│       └── useUserId.ts        # User ID management
-└── assets/                     # App icons and images
-```
-│   └── _layout.tsx             # Root layout
-├── src/
-│   ├── api/
-│   │   ├── client.ts           # API client setup
-│   │   ├── numerology.ts       # API methods
-│   │   ├── schema.ts           # Generated types from OpenAPI
-│   │   └── types.ts            # Type exports
-│   ├── components/
-│   │   └── RoxyBranding.tsx    # API key setup screen
-│   └── constants/
-│       └── colors.ts           # Theme colors
-├── assets/                     # Logo, icons, images
-├── .env                        # Environment variables
-└── package.json
+The SDK is the only data layer. There is no generated schema file to keep in sync: `@roxyapi/sdk` ships its own types from the same OpenAPI spec the API serves, so a response flows straight into a screen with no glue code.
+
+### One typed client
+
+```ts
+// src/api/client.ts
+import { createRoxy } from '@roxyapi/sdk';
+
+const key = process.env.EXPO_PUBLIC_ROXYAPI_KEY ?? '';
+export const roxy = createRoxy(key);
+export const hasApiKey = (): boolean => Boolean(key);
 ```
 
-## API Endpoints
+### Geocode first, then chart
 
-The app provides access to all 17 RoxyAPI Vedic Astrology endpoints via the type-safe API client:
+Every chart needs latitude, longitude, and timezone. The app never asks a user to type coordinates: it geocodes the birth city through `roxy.location.searchCities`, then feeds the result into the chart call.
 
-### Birth Charts & Divisional Charts
-- `getBirthChart()` - D1 Rashi chart (natal chart)
-- `getNavamsa()` - D9 divisional chart (marriage)
-- `getPlanetaryPositions()` - Detailed planetary data
+```ts
+// src/api/vedic.ts
+export const vedicApi = {
+  searchCities: async (q) => unwrap(await roxy.location.searchCities({ query: { q } }), 'Failed to search cities').cities,
+  getBirthChart: async (body) => unwrap(await roxy.vedicAstrology.generateBirthChart({ body }), 'Failed to calculate birth chart'),
+  // ...
+};
+```
 
-### Dasha Timing Systems
-- `getCurrentDasha()` - Current Mahadasha/Antardasha/Pratyantardasha
-- `getMajorDasha()` - All 9 Mahadashas (120-year cycle)
+```tsx
+// app/(tabs)/index.tsx
+const data = await vedicApi.getBirthChart({
+  date, time, latitude: city.latitude, longitude: city.longitude, timezone: city.timezone,
+});
+```
 
-### Daily Calendar
-- `getPanchang()` - Tithi, Nakshatra, Yoga, Karana
+## Featured endpoints
 
-### Compatibility
-- `getCompatibility()` - Ashtakoota Guna Milan matching
+The highest-demand Vedic endpoints, in the order you are most likely to ship them. Every method name and field below comes from the [OpenAPI spec](https://roxyapi.com/api/v2/vedic-astrology/openapi.json).
 
-### Dosha Analysis
-- `getManglikDosha()` - Mangal Dosha check
-- `getKalsarpaDosha()` - Kalsarpa Yoga detection
-- `getSadhesati()` - Saturn transit analysis
+```ts
+import { createRoxy } from '@roxyapi/sdk';
 
-### Yogas
-- `getAllYogas()` - List of 300+ planetary yoga combinations
+const roxy = createRoxy(process.env.EXPO_PUBLIC_ROXYAPI_KEY!);
 
-### KP Astrology (Krishnamurti Paddhati)
-- `getKPAyanamsa()` - Current KP-Newcomb ayanamsa value
-- `getKPPlanets()` - Planetary positions with sub-lords
-- `getKPCusps()` - House cusps with sub-lords  
-- `getKPChart()` - Complete KP chart with all calculations
+// 0. Geocode the birth city. timezone is the IANA string, passed straight into any chart.
+const { data: places } = await roxy.location.searchCities({ query: { q: 'Delhi, India' } });
+const { latitude, longitude, timezone } = places.cities[0];
 
-**Usage example:**
-
-```typescript
-import { astrologyApi } from './src/api';
-
-// Birth chart
-const chart = await astrologyApi.getBirthChart({
-  date: '1990-07-04',
-  time: '10:12:00',
-  latitude: 28.6139,
-  longitude: 77.209,
-  timezone: 5.5
+// 1. Kundli (D1 Rashi chart). The top India astrology query, the entry point for every Jyotish product.
+const { data: kundli } = await roxy.vedicAstrology.generateBirthChart({
+  body: { date: '1990-07-04', time: '10:12:00', latitude, longitude, timezone },
 });
 
-// KP Astrology
-const kpChart = await astrologyApi.getKPChart({
-  date: '1990-07-04',
-  time: '10:12:00',
-  latitude: 28.6139,
-  longitude: 77.209,
-  timezone: 5.5,
-  ayanamsa: 'kp-newcomb' // or 'custom' with ayanamsaValue
+// 2. Detailed Panchang. Tithi, nakshatra, yoga, karana, Rahu Kaal, and the muhurtas in one call.
+const { data: panchang } = await roxy.vedicAstrology.getDetailedPanchang({
+  body: { date: '2026-05-23', latitude, longitude, timezone },
 });
 
-// Dosha checks
-const manglik = await astrologyApi.getManglikDosha({ date, time, latitude, longitude, timezone });
-const kalsarpa = await astrologyApi.getKalsarpaDosha({ date, time, latitude, longitude, timezone });
+// 3. Vimshottari Dasha. The running Mahadasha, Antardasha, and Pratyantardasha with remaining time.
+const { data: dasha } = await roxy.vedicAstrology.getCurrentDasha({
+  body: { date: '1990-07-04', time: '10:12:00', latitude, longitude, timezone },
+});
+
+// 4. Manglik (Mangal) Dosha. The most-asked matrimonial question in India.
+const { data: dosha } = await roxy.vedicAstrology.checkManglikDosha({
+  body: { date: '1990-07-04', time: '10:12:00', latitude, longitude, timezone },
+});
+
+// 5. Ashtakoota Guna Milan. The 36-point matrimonial compatibility score.
+const { data: milan } = await roxy.vedicAstrology.calculateGunMilan({
+  body: {
+    person1: { date: '1990-07-04', time: '10:12:00', latitude, longitude, timezone },
+    person2: { date: '1992-03-15', time: '14:30:00', latitude, longitude, timezone },
+  },
+});
+
+// 6. KP ruling planets. Horary answers for real-time "will X happen" questions.
+const { data: kp } = await roxy.vedicAstrology.getKpRulingPlanets({ body: { latitude, longitude, timezone } });
+
+// 7. Navamsa (D9). The marriage and spiritual divisional chart, with Vargottama detection.
+const { data: navamsa } = await roxy.vedicAstrology.generateNavamsa({
+  body: { date: '1990-07-04', time: '10:12:00', latitude, longitude, timezone },
+});
 ```
 
-## Type Safety
+This template uses 6 of the 43 Vedic endpoints. Browse the rest in the [API reference](https://roxyapi.com/api-reference#tag/vedic-astrology).
 
-The app uses auto-generated TypeScript types from the RoxyAPI OpenAPI schema:
+## Project structure
 
-```bash
-# Regenerate types when API updates
-npm run generate:types
+```
+app/                          # Expo Router screens
+├── _layout.tsx               # Root Stack, shows the setup hint when no key is set
+├── (tabs)/
+│   ├── _layout.tsx           # Bottom tabs
+│   ├── index.tsx             # Birth Chart (Kundli)
+│   ├── navamsa.tsx           # Navamsa (D9)
+│   ├── dasha.tsx             # Vimshottari Dasha
+│   ├── panchang.tsx          # Detailed Panchang
+│   └── compatibility.tsx     # Ashtakoota Guna Milan matching
+src/
+├── api/
+│   ├── client.ts             # The one Roxy SDK client + hasApiKey guard
+│   ├── vedic.ts              # Wraps roxy.vedicAstrology.* and roxy.location.*, unwraps { data, error }
+│   ├── types.ts              # SDK response types under app-friendly names
+│   └── index.ts              # Barrel export
+├── components/
+│   ├── CitySearch.tsx        # Geocoding picker, feeds lat/lon/timezone into any chart
+│   └── RoxyBranding.tsx      # Setup screen shown when no API key is configured
+├── constants/colors.ts       # appColors for React Native props
+└── hooks/useUserId.ts        # Stable device id in AsyncStorage
 ```
 
-Types are automatically generated from:
-```
-https://roxyapi.com/api/v2/vedic-astrology/openapi.json
-```
+## Customize
 
-## Styling
+- **Add a feature.** Pick a Vedic method, add a wrapper in `src/api/vedic.ts`, call it from a screen. The SDK types regenerate from the spec, so new endpoints flow through with no manual typing.
+- **Change the theme.** This app uses Tailwind colors through NativeWind. Swap `orange-600` in the screen `className` strings for any Tailwind color, and update `appColors.primary` in `src/constants/colors.ts` for the React Native props.
+- **Add a dosha or KP screen.** The data layer already wraps `checkManglikDosha`, `checkKalsarpaDosha`, `checkSadhesati`, and `getKpRulingPlanets`, so a new screen is one component plus one tab.
 
-Built with **NativeWind v4** (Tailwind CSS for React Native):
+## Why Roxy
 
-- `className="text-3xl font-bold text-zinc-900 dark:text-white"` - Tailwind classes
-- Automatic dark mode with `dark:` prefix
-- Orange brand color (`orange-600`)
-- Zinc gray scale for text and backgrounds
+- **Breadth.** Vedic astrology plus Western astrology, numerology, tarot, biorhythm, I Ching, crystals, dreams, and angel numbers under one key.
+- **Type-safe.** The SDK types come from one OpenAPI pipeline, so response shapes cannot drift from what the API returns.
+- **Eight languages.** Pass `query: { lang }` on the interpretation endpoints for English, Hindi, Turkish, Spanish, German, Portuguese, French, or Russian.
+- **Remote MCP.** Connect AI agents to every Vedic endpoint at `roxyapi.com/mcp/vedic-astrology`, no local setup.
 
-## Building for Production
+## Links
 
-### iOS
-
-```bash
-eas build --platform ios
-```
-
-### Android
-
-```bash
-eas build --platform android
-```
-
-Requires [Expo Application Services (EAS)](https://expo.dev/eas) account.
-
-## Customization Tips
-
-1. **Add more charts**: The API supports KP System, Chalit chart, and other divisional charts
-2. **Enhance UI**: Add chart visualizations with SVG, animations with Reanimated
-3. **Save kundlis**: Use AsyncStorage to save user birth charts
-4. **Share results**: Add share functionality for birth chart details
-5. **Multi-language**: Add i18n for Hindi/Sanskrit terminology
-6. **Custom colors**: Modify `src/constants/colors.ts` and Tailwind config
-
-## Learn More
-
-- **Product Page**: [RoxyAPI Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api)
-- **API Documentation**: [roxyapi.com/docs](https://roxyapi.com/docs)
-- **OpenAPI Schema**: [vedic-astrology/openapi.json](https://roxyapi.com/api/v2/vedic-astrology/openapi.json)
-- **Pricing**: [roxyapi.com/pricing](https://roxyapi.com/pricing)
-- **Expo Documentation**: [docs.expo.dev](https://docs.expo.dev)
-
-## Support
-
-- Product Page: [RoxyAPI Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api)
-- API Documentation: [roxyapi.com/docs](https://roxyapi.com/docs)
-- Get API Key: [roxyapi.com/pricing](https://roxyapi.com/pricing)
+- [Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api)
+- [API reference and playground](https://roxyapi.com/api-reference#tag/vedic-astrology)
+- [Get API key](https://roxyapi.com/pricing)
+- [All templates](https://roxyapi.com/starters)
+- [Connect AI agents via MCP](https://roxyapi.com/docs/mcp)
 
 ## License
 
-MIT - Feel free to use this starter for your own Vedic astrology app projects.
-
----
-
-**Built with ❤️ using [RoxyAPI](https://roxyapi.com) - Professional APIs for developers**
+MIT
