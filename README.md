@@ -2,7 +2,7 @@
 
 [![Get API Key](https://img.shields.io/badge/Get_API_Key-roxyapi.com-black?style=for-the-badge)](https://roxyapi.com/pricing)
 [![API Docs](https://img.shields.io/badge/API_Docs-Reference-black?style=for-the-badge)](https://roxyapi.com/api-reference#tag/vedic-astrology)
-[![License: MIT](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](https://github.com/RoxyAPI/vedic-astrology-starter-app/blob/main/LICENSE)
 
 Open-source React Native (Expo) template for a Vedic astrology app: Kundli (D1 Rashi chart), Navamsa (D9), Vimshottari Dasha, detailed Panchang, and Ashtakoota Guna Milan matching. Built on the [Roxy](https://roxyapi.com) Vedic Astrology API and the official [@roxyapi/sdk](https://www.npmjs.com/package/@roxyapi/sdk). One API key, every Jyotish and KP endpoint, full control over your native UI.
 
@@ -11,10 +11,10 @@ Fork it, set one environment variable, and ship.
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/01.jpeg" width="220" />
-  <img src="screenshots/02.jpeg" width="220" />
-  <img src="screenshots/03.jpeg" width="220" />
-  <img src="screenshots/04.jpeg" width="220" />
+  <img src="https://raw.githubusercontent.com/RoxyAPI/vedic-astrology-starter-app/main/screenshots/01.jpeg" width="220" />
+  <img src="https://raw.githubusercontent.com/RoxyAPI/vedic-astrology-starter-app/main/screenshots/02.jpeg" width="220" />
+  <img src="https://raw.githubusercontent.com/RoxyAPI/vedic-astrology-starter-app/main/screenshots/03.jpeg" width="220" />
+  <img src="https://raw.githubusercontent.com/RoxyAPI/vedic-astrology-starter-app/main/screenshots/04.jpeg" width="220" />
 </p>
 
 ## What you get
