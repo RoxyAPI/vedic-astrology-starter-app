@@ -1,6 +1,6 @@
 # Agents Guide
 
-This is a RoxyAPI starter app. A Vedic Jyotish and KP astrology app built with React Native, Expo SDK 54, and TypeScript. Runs on iOS, Android, and Web from one codebase. Ships Kundli (D1), Navamsa (D9), Vimshottari Dasha, detailed Panchang, and Ashtakoota Guna Milan matching, all powered by the RoxyAPI Vedic Astrology API through the official `@roxyapi/sdk`.
+This is a RoxyAPI starter app. A Vedic Jyotish and KP astrology app built with React Native, Expo SDK 57, and TypeScript. Runs on iOS, Android, and Web from one codebase. Ships Kundli (D1), Navamsa (D9), Vimshottari Dasha, detailed Panchang, and Ashtakoota Guna Milan matching, all powered by the RoxyAPI Vedic Astrology API through the official `@roxyapi/sdk`.
 
 ## Setup
 - Get an API key at https://roxyapi.com/pricing
