@@ -125,8 +125,11 @@ export default function PanchangScreen() {
               <Text className="text-base font-bold text-zinc-900 dark:text-white">
                 {result.rahuKaal.start} - {result.rahuKaal.end}
               </Text>
+              {/* Abhijit Muhurta is null on Wednesdays, when it coincides with Dur Muhurta. */}
               <Text className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">
-                Abhijit Muhurta {result.abhijitMuhurta.start} - {result.abhijitMuhurta.end}
+                {result.abhijitMuhurta
+                  ? `Abhijit Muhurta ${result.abhijitMuhurta.start} - ${result.abhijitMuhurta.end}`
+                  : 'No Abhijit Muhurta today'}
               </Text>
             </View>
           </View>
