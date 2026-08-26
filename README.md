@@ -186,7 +186,7 @@ src/
 
 ## Why Roxy
 
-- **Breadth.** Vedic astrology plus Western astrology, numerology, tarot, biorhythm, I Ching, crystals, dreams, and angel numbers under one key.
+- **Breadth.** Vedic astrology plus Western astrology, forecast, human design, Chinese astrology, feng shui, numerology, tarot, biorhythm, I Ching, crystals, dreams, and angel numbers under one key.
 - **Type-safe.** The SDK types come from one OpenAPI pipeline, so response shapes cannot drift from what the API returns.
 - **Eight languages.** Pass `query: { lang }` on the interpretation endpoints for English, Hindi, Turkish, Spanish, German, Portuguese, French, or Russian.
 - **Remote MCP.** Connect AI agents to every Vedic endpoint at `roxyapi.com/mcp/vedic-astrology`, no local setup.
