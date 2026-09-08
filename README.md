@@ -196,7 +196,7 @@ src/
 - [Vedic Astrology API](https://roxyapi.com/products/vedic-astrology-api)
 - [API reference and playground](https://roxyapi.com/api-reference#tag/vedic-astrology)
 - [Get API key](https://roxyapi.com/pricing)
-- [All templates](https://roxyapi.com/starters)
+- [All templates](https://roxyapi.com/templates)
 - [Connect AI agents via MCP](https://roxyapi.com/docs/mcp)
 
 ## License
